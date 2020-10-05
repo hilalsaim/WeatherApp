@@ -1,0 +1,17 @@
+weather:
+    weatherApiConfigMap:
+        openweathermap:
+            name: Open Weather Map
+            url: http://api.openweathermap.org/data/2.5/weather?q={city}&appid={apikey}
+            api-key: e1196d972bc515005ff4193580f73e89
+            json-node: main.temp
+        weatherbit:
+            name: Weatherbit
+            url: http://api.weatherbit.io/v2.0/current?city={city}&key={apikey}
+            api-key: fe7376e142624591be57e1b8045674fb
+            json-node: data.[0].temp
+        accuweather:
+            name: AccuWeather
+            url: http://dataservice.accuweather.com/forecasts/v1/daily/5day/{city}?apikey={apikey}
+            api-key: xfUMShyqdAzApKoOZdfRYWo9BguEUszf
+            json-node: DailyForecasts.Temperature.Minimum.Value
