@@ -27,7 +27,7 @@ public class WeatherappApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        String t = weatherService.getWeatherForecast("Krakow", "accuweather");
+        String t = weatherService.getWeatherForecast("Krakow", "openweathermap");
         log.info("Temp: {}", t);
 
         weatherApiConfig.getWeatherApiConfigMap().forEach(
